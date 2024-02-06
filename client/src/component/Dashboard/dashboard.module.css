@@ -1,0 +1,71 @@
+.Dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30rem;
+    top: 10rem;
+}
+
+.heading{
+    font-size: 5rem;
+    font-weight: 600;
+    color: rgb(84, 82, 82);
+}
+
+.heading span{
+    color: #d0cccc;
+}
+.input{
+    height: 3rem;
+    width: 30rem;
+    font-size: 2rem;
+    border: none;
+    padding-left: .9rem;
+}
+
+.createBtn{
+    width: 15rem;
+    height: 3.2rem;
+    font-weight: 600;
+    transition: transform 0.5s ease,
+    background-color 0.7s ease;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #d0cccc;
+    position: relative;
+    bottom: .2rem;
+}
+
+.createBtn:hover{
+    background-color: #d0cccc;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .result p {
+    border: 1px solid black;
+    margin-right: 1rem;
+    padding-top: .4rem;
+    width: 20rem;
+    height: 2.1rem;
+  }
+  .result button {
+    height: 2.5rem;
+    cursor: pointer;
+    background: #d0cccc;
+    border: none;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  .result button.copied {
+    background: #fff;
+    color: var(--primary-color);
+  }

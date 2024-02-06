@@ -1,0 +1,53 @@
+ 
+.analytics{
+    width: 70%;
+    margin-left: 35rem;
+    margin-top: 6rem;
+  }
+
+
+   h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #5076FF;
+    font-size: 3rem;
+   }
+   
+   table {
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+   }
+
+
+   tr:nth-child(even) {
+    background-color: #B3C4FF;
+ }
+
+ tr:nth-child(even) td:first-child {
+    border-top-left-radius: .9rem; 
+    border-bottom-left-radius: .9rem; 
+}
+
+tr:nth-child(even) td:last-child {
+    border-top-right-radius: .9rem; 
+    border-bottom-right-radius: .9rem; 
+}
+   
+   th, td {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+   }
+   
+   th {
+    background-color: #5076FF;
+    color: white;
+   }
+   
+   a {
+    color: black;
+   }
+ 
