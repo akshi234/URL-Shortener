@@ -1,3 +1,3 @@
-const BASE_URL = "http://localhost:8001";
+const BASE_URL = "https://url-shortner-nsse.onrender.com";
 
 export default BASE_URL;
