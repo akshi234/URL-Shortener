@@ -1,8 +1,9 @@
 import styles from "./dashboard.module.css";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import BASE_URL from "../../constants";
 
 export default function Dashboard() {
   const [shortenLink, setShortenLink] = useState("");
@@ -13,7 +14,7 @@ export default function Dashboard() {
       const token = localStorage.getItem("token");
       console.log("Token from localStorage:", token);
       const response = await axios.post(
-        "http://localhost:8001/url",
+        `${BASE_URL}/url`,
         { url: value },
         {
           headers: {
@@ -23,7 +24,7 @@ export default function Dashboard() {
         }
       );
       const { id } = response.data;
-      setShortenLink(`http://localhost:8001/${id}`);
+      setShortenLink(`${BASE_URL}/${id}`);
     } catch (error) {
       console.error("Error generating short URL:", error);
     }
@@ -39,6 +40,7 @@ export default function Dashboard() {
   };
   return (
     <div className={styles.Dashboard}>
+      <ToastContainer />
       <div className={styles.heading}>
         URL <span>shortener</span>
       </div>

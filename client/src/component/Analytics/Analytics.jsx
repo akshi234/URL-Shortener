@@ -5,6 +5,7 @@ import deleteImg from "../../assets/delete.png";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BASE_URL from "../../constants";
 
 export default function Analytics({ onEditClick }) {
   const [url, setUrl] = useState([]);
@@ -17,7 +18,7 @@ export default function Analytics({ onEditClick }) {
     try {
       const token = localStorage.getItem("token");
       console.log("Token from localStorage:", token);
-      const response = await axios.get(`http://localhost:8001/url/visits`, {
+      const response = await axios.get(`${BASE_URL}/url/visits`, {
         headers: {
           "Content-Type": "application/json",
           token: token,
@@ -34,7 +35,7 @@ export default function Analytics({ onEditClick }) {
     try {
       const token = localStorage.getItem("token");
       console.log("Token from localStorage:", token);
-      await axios.delete(`http://localhost:8001/url/delete/${shortId}`, {
+      await axios.delete(`${BASE_URL}/url/delete/${shortId}`, {
         headers: {
           "Content-Type": "application/json",
           token: token,
