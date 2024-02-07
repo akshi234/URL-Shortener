@@ -19,6 +19,7 @@ app.use("/", authRoute);
 app.use("/url", urlRoute);
 app.get("/:shortId", async (req, res) => {
   const shortId = req.params.shortId;
+  console.log("this is short id : ", shortId);
 
   try {
     const entry = await URL.findOneAndUpdate(

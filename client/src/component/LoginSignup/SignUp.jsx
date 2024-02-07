@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../../constants";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function SignUp() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("${BASE_URL}/signup", {
+      const response = await axios.post(`${BASE_URL}/signup`, {
         name,
         email,
         password,
